@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUGAS PBP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="profile">
+            <img src="images/profile.jpg" alt="Foto Profil" class="profile-img">
+            <div>
+                <h1>Abdul Mu'iz Azizul Raeba</h1>
+                <p>Email: abdulmuizazizul@gmail.com</p>
+                <p>Telepon: 0853-4039-6793</p>
+            </div>
+        </div>
+        <button id="dark-mode-toggle">
+            <i class="fas fa-moon"></i> <!-- Ikon bulan -->
+            <i class="fas fa-sun" style="display: none;"></i> <!-- Ikon matahari -->
+        </button>
+    </header>
+
+    <section id="about">
+        <h2>Tentang Saya</h2>
+        <p>Sebagai seorang Mahasiswa di Ilmu Komputer, saya memiliki minat yang kuat terhadap dunia teknologi dan pemrograman, namun di sisi lain, saya juga memiliki passion yang besar dalam bidang desain. Saya percaya bahwa kombinasi antara logika komputasi dan kreativitas desain dapat menciptakan solusi yang inovatif dan estetis. Saya menikmati proses mengembangkan aplikasi atau website yang tidak hanya fungsional, tetapi juga memiliki antarmuka yang menarik dan user-friendly. </p>
+    </section>
+
+    <section id="experience">
+        <h2>Pengalaman Hidup</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Institusi</th>
+                    <th>Jurusan/Program</th>
+                    <th>Tahun</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SMAN 1 Kendari</td>
+                    <td>MIPA</td>
+                    <td>2020 - 2023</td>
+                </tr>
+                <tr>
+                    <td>Universitas Haluoleo</td>
+                    <td>Ilmu Komputer</td>
+                    <td>2023 - Sekarang</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="education">
+        <h2>Portofolio</h2>
+        <div class="portfolio-images">
+            <img src="images/portfolio1.png" alt="Portofolio 1" class="portfolio-img" onclick="openLightbox('images/portfolio1.png')">
+            <img src="images/portfolio2.png" alt="Portofolio 2" class="portfolio-img" onclick="openLightbox('images/portfolio2.png')">
+            <img src="images/portfolio3.jpg" alt="Portofolio 3" class="portfolio-img" onclick="openLightbox('images/portfolio3.jpg')">
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+        <span class="close-btn" onclick="closeLightbox(event)">&times;</span>
+        <button class="nav-btn prev-btn" onclick="changeImage(-1)">&#10094;</button>
+        <img id="lightbox-img" class="lightbox-img" src="" alt="Lightbox Image">
+        <button class="nav-btn next-btn" onclick="changeImage(1)">&#10095;</button>
+    </div>
+
+    <!-- Form WhatsApp -->
+    <section id="contact">
+        <h2>Hubungi Saya</h2>
+        <form id="whatsapp-form">
+            <div class="form-group">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" placeholder="Tulis pesan Anda" required></textarea>
+            </div>
+            <button type="submit">Kirim via WhatsApp</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Abdul Mu'iz Azizul Raeba. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
