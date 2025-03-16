@@ -1,0 +1,384 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #217d0c, #007aa6);
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 5px 0;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    font-size: 1.8  rem;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    margin-top: 40px;
+}
+
+#experience {
+    margin: 20px;
+    padding: 20px;
+  
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#experience h2 {
+    padding-bottom: 10px;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+#experience table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+#experience th, #experience td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+#experience th {
+ 
+    font-weight: bold;
+   
+}
+
+
+/* Container untuk gambar portofolio */
+.portfolio-images {
+    display: flex; /* Mengatur tata letak flexbox */
+    flex-wrap: wrap; /* Membuat gambar wrap ke baris berikutnya jika tidak cukup space */
+    gap: 10px; /* Jarak antara gambar */
+    justify-content: center; /* Pusatkan gambar secara horizontal */
+}
+
+/* Styling untuk setiap gambar */
+.portfolio-img {
+    width: 200px; /* Lebar gambar */
+    height: auto; /* Tinggi disesuaikan agar proporsional */
+    border-radius: 4px; /* Sudut gambar melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    transition: transform 0.3s ease; /* Animasi saat hover */
+}
+
+/* Efek saat gambar dihover */
+.portfolio-img:hover {
+    transform: scale(1.05); /* Membesar sedikit saat dihover */
+    cursor: pointer; /* Mengubah kursor menjadi pointer */
+}
+
+/* Container untuk gambar portofolio */
+.portfolio-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Styling untuk setiap gambar */
+.portfolio-img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.portfolio-img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    visibility: hidden; /* Sembunyikan lightbox */
+    opacity: 0; /* Mulai dengan opacity 0 */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Animasi opacity dan visibility */
+}
+
+.lightbox.active {
+    visibility: visible; /* Tampilkan lightbox */
+    opacity: 1; /* Akhiri dengan opacity 1 */
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    transform: scale(0.8); /* Mulai dengan ukuran lebih kecil */
+    transition: transform 0.3s ease; /* Animasi transform */
+}
+
+.lightbox.active .lightbox-img {
+    transform: scale(1); /* Akhiri dengan ukuran normal */
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #ccc;
+}
+
+/* Tombol Navigasi */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+/* Form WhatsApp */
+#contact {
+    padding: 20px;
+
+    border-radius: 8px;
+    margin: 20px auto; /* Pusatkan form dan beri jarak dari atas/bawah */
+    max-width: 600px; /* Batasi lebar maksimal form */
+    width: 90%; /* Lebar form 90% dari parent container */
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+#whatsapp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input, .form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%; /* Pastikan input dan textarea memenuhi lebar form */
+    box-sizing: border-box; /* Agar padding tidak mempengaruhi lebar */
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+#whatsapp-form button {
+    padding: 10px;
+    background-color: #25D366;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%; /* Tombol memenuhi lebar form */
+}
+
+#whatsapp-form button:hover {
+    background-color: #128C7E;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background: linear-gradient(135deg, #217d0c, #007aa6);
+}
+
+body.dark-mode section {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode h2 {
+    color: #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+body.dark-mode footer {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.dark-mode .profile-img {
+    border: 3px solid #e0e0e0;
+}
+
+#dark-mode-toggle {
+    background-color: #ffcc00; /* Warna kuning cerah */
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px; /* Bentuk bulat */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow kartunish */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #ffdd55; /* Warna kuning lebih terang saat hover */
+    transform: translateY(-2px); /* Efek hover naik sedikit */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Shadow lebih besar saat hover */
+}
+
+#dark-mode-toggle:active {
+    transform: translateY(0); /* Kembali ke posisi awal saat diklik */
+}
+
+/* Ikon bulan dan matahari */
+#dark-mode-toggle i {
+    font-size: 20px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Animasi ikon saat mode gelap aktif */
+body.dark-mode #dark-mode-toggle .fa-moon {
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+
+body.dark-mode #dark-mode-toggle .fa-sun {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+/* Warna tombol saat mode gelap aktif */
+body.dark-mode #dark-mode-toggle {
+    background-color: #333;
+    color: #ffcc00;
+}
+
+body.dark-mode #dark-mode-toggle:hover {
+    background-color: #444;
+}
