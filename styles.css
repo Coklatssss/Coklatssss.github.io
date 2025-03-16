@@ -300,6 +300,91 @@ section {
     animation: fadeIn 0.8s ease-out;
 }
 
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+header {
+    background: linear-gradient(135deg, #217d0c, #007aa6);
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.5s ease;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 5px 0;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    font-size: 1.8rem;
+    text-align: center;
+    transition: color 0.5s ease, border-color 0.5s ease;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    margin-top: 40px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
 /* Dark Mode Styles */
 body.dark-mode {
     background-color: #121212;
@@ -330,36 +415,37 @@ body.dark-mode .profile-img {
     border: 3px solid #e0e0e0;
 }
 
+/* Tombol Dark Mode */
 #dark-mode-toggle {
-    background-color: #ffcc00; /* Warna kuning cerah */
+    background-color: #ffcc00;
     color: #333;
     border: none;
     padding: 10px 20px;
-    border-radius: 25px; /* Bentuk bulat */
+    border-radius: 25px;
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow kartunish */
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.3s ease;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
 #dark-mode-toggle:hover {
-    background-color: #ffdd55; /* Warna kuning lebih terang saat hover */
-    transform: translateY(-2px); /* Efek hover naik sedikit */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Shadow lebih besar saat hover */
+    background-color: #ffdd55;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
 #dark-mode-toggle:active {
-    transform: translateY(0); /* Kembali ke posisi awal saat diklik */
+    transform: translateY(0);
 }
 
 /* Ikon bulan dan matahari */
 #dark-mode-toggle i {
     font-size: 20px;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 /* Animasi ikon saat mode gelap aktif */
@@ -373,12 +459,13 @@ body.dark-mode #dark-mode-toggle .fa-sun {
     transform: rotate(0deg);
 }
 
-/* Warna tombol saat mode gelap aktif */
-body.dark-mode #dark-mode-toggle {
-    background-color: #333;
-    color: #ffcc00;
+/* Animasi ikon saat mode terang aktif */
+body:not(.dark-mode) #dark-mode-toggle .fa-moon {
+    opacity: 1;
+    transform: rotate(0deg);
 }
 
-body.dark-mode #dark-mode-toggle:hover {
-    background-color: #444;
+body:not(.dark-mode) #dark-mode-toggle .fa-sun {
+    opacity: 0;
+    transform: rotate(90deg);
 }
